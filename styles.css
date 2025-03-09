@@ -1,0 +1,139 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: url("1134824.webp");
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.screen {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.screen.active {
+  display: block;
+  opacity: 1;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #28376e;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #e94584;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: background 0.3s, transform 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+  background: linear-gradient(135deg, #7289da, #e94584);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #5b6eae, #c7326b);
+  transform: scale(1.05);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tablink {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.tablink.active {
+  color: #7289da;
+  border-bottom: 2px solid #7289da;
+  transform: scale(1.1);
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.loading {
+  display: none;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #7289da;
+}
+
+.status {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #7289da;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
